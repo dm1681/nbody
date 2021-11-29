@@ -1,14 +1,19 @@
 """
 This file will be used to define a lot of the physics to be modeled in the nbody simulations
 """
+
+
+# TO DO - make this script a class
 import logging
 import numpy as np
+from typing import List
 
 from units import  CONST_G
+from body import Body
 
 
 
-def calc_position(bodies, dt, logger=None):
+def calc_position(bodies:List[Body], dt, logger=None):
     if logger is None:
         logger = logging.getLogger(__name__)
 
